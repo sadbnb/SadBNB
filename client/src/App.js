@@ -4,6 +4,7 @@ import Listings from "./components/Listings/Listings";
 import Bookings from "./components/Bookings/Bookings";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
+import Landing from "./pages/Landing/Landing";
 import {
   createBrowserRouter,
   Routes,
@@ -32,6 +33,10 @@ const App = () => {
     {
       path: "/register",
       element: <Register />,
+    },
+    {
+      path: "/landing",
+      element: <Landing />,
     },
   ]);
 
