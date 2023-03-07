@@ -2,28 +2,33 @@ import "./navbar.scss";
 import styled from "styled-components";
 import Logo from "../Logo/Logo";
 import { Link } from "react-router-dom";
-import { BsPersonCircle } from "react-icons/bs";
+import defaultUser from "../../assets/default-user.png";
 
 const Navbar = () => {
   return (
-    <header>
-      <div className="navigation">
+    <div className="navigation">
+      <nav>
         <div className="logo">
           <Logo />
         </div>
-        <div className="nav-menu">
-          <ul className="nav-list">
-            <li className="nav-item">Home</li>
-            <li className="nav-item">Listings</li>
-            <li className="nav-item">Booking</li>
-          </ul>
+        <ul className="nav-list">
+          <li className="nav-item">
+            <Hyperlink to="/">Home</Hyperlink>
+          </li>
+          <li className="nav-item">
+            <Hyperlink to="listings">Listings</Hyperlink>
+          </li>
+          <li className="nav-item">
+            <Hyperlink to="bookings">Bookings</Hyperlink>
+          </li>
+        </ul>
 
-          <div className="rightbar">
-            <BsPersonCircle />
-          </div>
+        <div className="user">
+          <img src={defaultUser} alt="" />
+          <span>Dwayne</span>
         </div>
-      </div>
-    </header>
+      </nav>
+    </div>
   );
 };
 
@@ -32,13 +37,12 @@ const Hyperlink = styled(Link)`
   text-decoration: none;
 
   &:visited {
-    color: white;
+    color: black;
   }
 
   &:hover {
     color: #f5b70a;
     transition-duration: 0.3s;
-    text-decoration: underline;
   }
 `;
 

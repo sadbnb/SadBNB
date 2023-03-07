@@ -1,5 +1,9 @@
 import "./App.css";
-import Navbar from "./components/Navbar/Navbar";
+import Home from "./pages/Home/Home";
+import Listings from "./components/Listings/Listings";
+import Bookings from "./components/Bookings/Bookings";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
 import {
   createBrowserRouter,
   Routes,
@@ -11,7 +15,23 @@ const App = () => {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Navbar />,
+      element: <Home />,
+    },
+    {
+      path: "/bookings",
+      element: <Bookings />,
+    },
+    {
+      path: "/listings",
+      element: <Listings />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
     },
   ]);
 
