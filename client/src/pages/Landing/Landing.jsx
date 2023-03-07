@@ -1,5 +1,5 @@
 import Logo from "../../components/Logo/Logo";
-import main from "../../assets/main.svg";
+import main from "../../assets/bg.jpg";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -40,6 +40,13 @@ const Wrapper = styled.main`
     align-items: center;
     border-radius: 50%;
     object-fit: cover;
+
+    img {
+      width: 100px;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover;
+    }
   }
 
   .page {
@@ -62,14 +69,20 @@ const Wrapper = styled.main`
 
   .main-img {
     width: 100%;
-    display: block;
+    height: 60%;
     object-fit: cover;
+    border-radius: 50%;
   }
 
   .btn {
     cursor: pointer;
     color: white;
-    background: #2cb1bc;
+    background: linear-gradient(
+      #e61e4d 27.5%,
+      #e31c5f 40%,
+      #d70466 57.5%,
+      #bd1e59
+    );
     border: transparent;
     border-radius: 0.25rem;
     letter-spacing: 1px;
