@@ -21,7 +21,7 @@ const Login = () => {
           <button>Login</button>
           <div className="sign-up-btn">
             Don't have an account?
-            <Hyperlink to="/register">Sign up</Hyperlink>
+            <Hyperlink to="/register"> Sign up</Hyperlink>
           </div>
         </form>
       </div>

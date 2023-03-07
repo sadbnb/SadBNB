@@ -27,7 +27,7 @@ const Register = () => {
           <button>Register</button>
           <div className="sign-in-btn">
             Have an account?
-            <Hyperlink to="/login">Sign in</Hyperlink>
+            <Hyperlink to="/login"> Sign in</Hyperlink>
           </div>
         </form>
       </div>
