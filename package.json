@@ -9,5 +9,13 @@
     "clean": "rm -rf public",
     "deploy": "cp -a client/build/. public/",
     "heroku-postbuild": "npm run clean && npm run build && npm run deploy"
+  },
+  "devDependencies": {
+    "sass-loader": "^13.2.0",
+    "webpack": "^5.75.0"
+  },
+  "dependencies": {
+    "react-calendar": "^4.0.0",
+    "sass": "^1.58.3"
   }
 }
