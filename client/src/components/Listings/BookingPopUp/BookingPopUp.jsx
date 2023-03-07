@@ -1,12 +1,10 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import Calendar from '../Calendar/Calendar'
 import './BookingPopUp.scss'
-import Calendar from 'react-calendar'
 
 function BookingPopUp(props) {
 
-    const [date, setDate] = useState(new Date())
-
-    const handleOnChange = date => { setDate(date) }
+    const [calendarButton, setCalendarButton] = useState(false)
 
   return (props.trigger) ? (
     <div className='popup'>
@@ -14,11 +12,11 @@ function BookingPopUp(props) {
             <div className='pics-container'>
             <button className='close-btn' onClick={() => props.setTrigger(false)}>X</button>
                 <img className='Popup-pic1' src='https://luxuryrentalsmanhattan.com/sites/default/files/uploads/penthousewindowslivingroom.jpg' alt='NYC'/>
-                <button className='book-btn'>Book</button>
-                    <Calendar onChange={handleOnChange} value={date} />
+                <button className='book-btn' onClick={() => setCalendarButton(true)}>Book</button>
             </div>
-            { props.children}
+            { props.children }
         </div>
+        <Calendar trigger={calendarButton} setTrigger={setCalendarButton} />
     </div>
   ) : ""
 }
