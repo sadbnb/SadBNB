@@ -1,0 +1,2 @@
+class InteriorsController < ApplicationController
+end

@@ -7,8 +7,6 @@ import Register from "./pages/Register/Register";
 import Landing from "./pages/Landing/Landing";
 import {
   createBrowserRouter,
-  Routes,
-  Route,
   RouterProvider,
 } from "react-router-dom";
 
