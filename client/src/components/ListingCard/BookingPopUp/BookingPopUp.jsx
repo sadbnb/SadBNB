@@ -5,7 +5,7 @@ import BookingCard from '../BookingCard/BookingCard'
 
 function BookingPopUp(props) {
 
-    const { trigger, setTrigger, interiors } = props
+    const { trigger, setTrigger, interiors, description } = props
 
 
  
@@ -15,7 +15,7 @@ function BookingPopUp(props) {
         {
             interiors.map((interior) => {
                 console.log(interior.image)
-                return <BookingCard key={interior.id} interior={interior} setTrigger={setTrigger} />
+                return <BookingCard key={interior.id} interior={interior} setTrigger={setTrigger} description={description}/>
             })
         }
        

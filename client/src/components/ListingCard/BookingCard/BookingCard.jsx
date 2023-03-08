@@ -4,7 +4,7 @@ import './BookingCard.scss'
 import Calendar from '../Calendar/Calendar'
 
 
-const BookingCard = ({ interior, setTrigger}) => {
+const BookingCard = ({ interior, setTrigger, description}) => {
 
     console.log(interior.image)
 
@@ -22,7 +22,7 @@ const BookingCard = ({ interior, setTrigger}) => {
                 </div>
                 </section>
 
-                <h3 className='apt-title'>Luxury 3 bedrooms apartment in the heart of Manhattan</h3>
+                <h3 className='apt-title'>{description}</h3>
                 <button className='book-btn' onClick={() => setCalendarButton(true)}>BOOK</button>
             
             </div>

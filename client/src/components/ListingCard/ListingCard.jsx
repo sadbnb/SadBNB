@@ -20,7 +20,8 @@ const ListingCard = ({
     </a>
     </div>
 
-  <BookingPopUp interiors={apartment.interiors} trigger={buttonPopup} setTrigger={setButtonPopup} />
+  <BookingPopUp interiors={apartment.interiors} trigger={buttonPopup} setTrigger={setButtonPopup}
+  description={apartment.details}/>
   </div>
   )
 }
