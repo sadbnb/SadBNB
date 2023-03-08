@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Register = () => {
+
   return (
     <div className="register">
       <div className="register-container">
@@ -46,6 +47,6 @@ const Hyperlink = styled(Link)`
     transition-duration: 0.3s;
     text-decoration: underline;
   }
-`;
+;
 
 export default Register;
