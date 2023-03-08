@@ -20,5 +20,9 @@ const Listings = () => {
           apartment={apartment}
           key={apartment.id}
         />
-      ))}
-    </div>
+      ))
+}
+      </div>
+  )}
+
+  export default Listings

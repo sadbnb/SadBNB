@@ -48,5 +48,6 @@ const Hyperlink = styled(Link)`
     text-decoration: underline;
   }
 ;
+`
 
 export default Register;
