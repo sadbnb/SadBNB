@@ -1,0 +1,121 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-ineer {
+    position: relative;
+    padding: 32px;
+    width: 100%;
+    max-width: 640px;
+    background-color: white
+    
+}
+
+.popup-ineer .close-btn {
+    position: absolute;
+}
+
+
+.close-btn {
+	appearance: none;
+	position: relative;
+	padding: 1em 2em;
+	border: 0;
+	background-color: transparent;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1em;
+	font-weight: 600;
+	color: #f16464;
+    left: 40rem;
+    top: 0.3rem;
+    cursor: pointer;
+}
+
+
+.pics-container {
+    background-color: white;
+    width: 700px;
+    height: 770px;
+    border-radius: 5%;
+}
+
+$max-img-width: 600px;
+$max-img-height: 400px;
+
+.gallery {
+    display: flex;
+      margin: 40px;
+      max-width: $max-img-width;
+      position: relative;
+      //padding-top: $max-img-height/$max-img-width * 100%;
+      
+      @media screen and (min-width: $max-img-width){
+        padding-top: $max-img-height;
+      }
+    
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+     &__thumb {
+      padding-top: 6px;
+      margin: 3px;
+      display: block;
+    }
+    
+    &__selector {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      
+      &:checked {
+        + .gallery__img {
+          opacity: 1;
+        }
+        ~ .gallery__thumb > img {
+          box-shadow: 0 0 0 3px #e04932;;
+        }
+      }
+    }
+  }
+
+  .book-btn {
+    margin-left: 35rem;
+    margin-bottom: 2rem;
+    position: absolute;
+    width: 70px;
+    height: 40px;
+    color:white;
+    background-color: #e04932;
+    border: 0;
+    cursor: pointer;
+    border-radius: 8%;
+
+    &:hover {
+        background-color: orange;
+        font-size: large;
+    }
+  } 
+
+  .apt-title {
+    margin-left: 2rem;
+    color: orange;
+    width: fit-content;
+
+    &:hover {
+        font-style: oblique;
+        background-color:#f9bab0;
+    }
+  }
