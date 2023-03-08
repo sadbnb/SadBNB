@@ -1,0 +1,23 @@
+.calendar-container {
+    width:300px;
+    position:absolute;
+    padding: 32px;
+    background-color: white;
+    border-radius: 10%;
+}
+
+
+
+.calendar-close {
+	appearance: none;
+	position: relative;
+	border: 0;
+	background-color: transparent;
+	font-family: "Montserrat", sans-serif;
+	font-size: 1em;
+	font-weight: 600;
+	color: #f16464;
+    left: 13rem;
+    cursor: pointer;
+    }
+  

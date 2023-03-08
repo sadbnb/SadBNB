@@ -22,6 +22,3 @@ const Listings = () => {
         />
       ))}
     </div>
-  )
-};
-export default Listings;
