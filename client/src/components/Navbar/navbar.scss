@@ -19,11 +19,11 @@
       cursor: pointer;
 
       & {
-        color: black;
+        color: #e04932;
       }
 
       &:hover {
-        color: #f5b70a;
+        color: orange;
       }
     }
   }
@@ -47,5 +47,57 @@
     span {
       display: block;
     }
+  }
+
+  .btn-container {
+    position: relative;
+  }
+  .btn {
+    background: linear-gradient(
+      #e61e4d 27.5%,
+      #e31c5f 40%,
+      #d70466 57.5%,
+      #bd1e59
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 0.5rem;
+    position: relative;
+    box-shadow: var(--shadow-2);
+    width: 100%;
+    color: white;
+    border: none;
+    height: 50px;
+    border-radius: var(--borderRadius);
+  }
+
+  .dropdown {
+    position: absolute;
+    top: px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(
+      #e61e4d 27.5%,
+      #e31c5f 40%,
+      #d70466 57.5%,
+      #bd1e59
+    );
+    box-shadow: var(--shadow-2);
+    padding: 0.5rem;
+    text-align: center;
+    visibility: hidden;
+    border-radius: var(--borderRadius);
+  }
+  .show-dropdown {
+    visibility: visible;
+  }
+  .dropdown-btn {
+    background: transparent;
+    border-color: transparent;
+    color: #fff;
+    letter-spacing: var(--letterSpacing);
+    text-transform: capitalize;
+    cursor: pointer;
   }
 }
