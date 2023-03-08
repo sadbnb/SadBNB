@@ -5,6 +5,7 @@ import ListingCard from "../ListingCard/ListingCard";
 
 const Listings = () => {
   const [apartments, setApartments] = useState([]);
+  // console.log(apartments)
 
   useEffect(() => {
     fetch("http://localhost:3000/apartments")
@@ -17,7 +18,8 @@ const Listings = () => {
 
   // fetch apartments
   return (
-    <div>
+    <div className="card-container">
+    <div className="card-grid">
       {apartments.map((apartment) => (
         <ListingCard
           apartment={apartment}
@@ -25,6 +27,7 @@ const Listings = () => {
         />
       ))
 }
+</div>
       </div>
   )}
 
