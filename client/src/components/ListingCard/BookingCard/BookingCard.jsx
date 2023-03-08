@@ -22,7 +22,7 @@ const BookingCard = ({ interior, setTrigger, description}) => {
                 </div>
                 </section>
 
-                <h3 className='apt-title'>{description}</h3>
+                <h3 className='apt-details'>{description}</h3>
                 <button className='book-btn' onClick={() => setCalendarButton(true)}>BOOK</button>
             
             </div>

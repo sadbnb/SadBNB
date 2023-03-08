@@ -44,7 +44,7 @@
 .pics-container {
     background-color: white;
     width: 700px;
-    height: 770px;
+    height: 800px;
     border-radius: 5%;
 
     img {
@@ -74,12 +74,6 @@ $max-img-height: 400px;
       left: 0;
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
-    }
-    
-     &__thumb {
-      padding-top: 6px;
-      margin: 3px;
-      display: block;
     }
     
     &__selector {
@@ -121,13 +115,11 @@ $max-img-height: 400px;
     }
   } 
 
-  .apt-title {
-    margin-left: 2rem;
+  .apt-details {
+    margin-left: 1rem;
     color: orange;
-    width: fit-content;
-
-    &:hover {
-        font-style: oblique;
-        background-color:#f9bab0;
-    }
+    font-size: 11px;
+    padding: 1rem;
+    text-align: justify;
+    margin-right: 15px;
   }
