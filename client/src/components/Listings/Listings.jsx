@@ -1,6 +1,7 @@
 import "./listing.scss";
 import {useState, useEffect} from "react";
 import Listing from "../ListingCard/ListingCard";
+import ListingCard from "../ListingCard/ListingCard";
 
 const Listings = () => {
   const [apartments, setApartments] = useState([]);
@@ -8,15 +9,17 @@ const Listings = () => {
   useEffect(() => {
     fetch("http://localhost:3000/apartments")
     .then((r) => r.json())
-    .then((apartments) => 
-      setApartments(apartments));
+    .then((apartmentsData) => 
+      setApartments(apartmentsData));
   },[]);
+
+  
 
   // fetch apartments
   return (
     <div>
       {apartments.map((apartment) => (
-        <Listing 
+        <ListingCard
           apartment={apartment}
           key={apartment.id}
         />

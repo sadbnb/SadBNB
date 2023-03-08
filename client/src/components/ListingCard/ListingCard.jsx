@@ -12,14 +12,13 @@ const ListingCard = ({
     <section className="hero-section">
   <div className="card-grid">
     <a className="card" href="#">
-      <img className="card__background" src="https://luxuryrentalsmanhattan.com/sites/default/files/uploads/penthousewindowslivingroom.jpg"/>
-      <img src={apartment.main_image} alt="apt-image" />
-      <td>{apartment.title}</td>
+      <img className="card__background" src={apartment.main_image}/>
+     
       <div className="card__content">
-            <td>{apartment.location}</td>
-        <p className="card__category">Luxury apartment</p>
-              <td>{apartment.details}</td>
-        <h3 className="card__heading">NYC</h3>
+          
+        <p className="card__category">{apartment.title}</p>
+             
+        <h3 className="card__heading">{apartment.location}</h3>
         <button className="view-btn" onClick={() => setButtonPopup(true)}>VIEW</button>
       </div>
     </a>
