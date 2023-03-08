@@ -40,11 +40,16 @@ Apartment.create!(
     title: "Cozy 2-Bedroom Apartment in the Heart of Dubai",
     location: "Dubai",
     details: "This light-filled 1-bedroom apartment is located in the vibrant Dubai. With an open pool, this apartment feels spacious and inviting. Building amenities include a rooftop terrace with stunning views of the city and a fitness center. Plus, residents are just a short walk away from the neighborhood's best cafes, shops, and nightlife.",
-    main_image: "https://design-middleeast.com/wp-content/uploads/2023/02/Medium_resolution_150dpi-Jumeirah-Emirates-Towers-Outdoor-Pool-Portrait-1100x1650.jpg"
+    main_image: "https://www.constructionweekonline.com/cloud/2021/07/06/Sky-Collection-Emaar-Addres.jpg"
   )
 
 p "seeding Bookings"
 
 p "seeding Users"
+User.create!(
+  username: 'sebseb',
+  email: 'seb@sebbot.com',
+  password: '123'
+)
 
 p "done seeding"
