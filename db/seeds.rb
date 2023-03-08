@@ -26,7 +26,7 @@ Apartment.create!(
   title: "Charming 2-Bedroom Apartment in Downtown Boston",
   location: "Boston, Massachusetts",
   details: "This cozy 2-bedroom apartment is located in a historic building in the heart of downtown Boston. With exposed brick walls and hardwood floors, this apartment is full of character and charm. Residents also have access to a private outdoor patio and a fitness center. Plus, the apartment is just steps away from the city's top restaurants, shops, and cultural attractions.",
-  main_image: "https://design-middleeast.com/wp-content/uploads/2022/07/4-2022-06-29-ColinMiller-OWS-0002-2969-Balanced-1100x734.jpg"
+  main_image: "https://www.sfproperties.com/images/made/images/uploads/property_gallery/2060jacksonPenthouse/_2081240444_773_542_s_c1.jpg"
 )
 
 Apartment.create!(
