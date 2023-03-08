@@ -6,6 +6,7 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Landing from "./pages/Landing/Landing";
 import Navbar from "./components/Navbar/Navbar";
+import {useState} from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -13,11 +14,12 @@ import {
 } from "react-router-dom";
 
 const App = () => {
+  const [user, setUser] = useState(null)
 
   const Layout = () => {
     return (
       <>
-        <Navbar />
+        <Navbar user={user} setUser={setUser}/>
         <Outlet />
       </>
     )
@@ -45,11 +47,11 @@ const App = () => {
     },
     {
       path: "/login",
-      element: <Login />,
+      element: <Login user={user} setUser={setUser}/>,
     },
     {
       path: "/register",
-      element: <Register />,
+      element: <Register user={user} setUser={setUser}/>,
     },
     {
       path: "/landing",

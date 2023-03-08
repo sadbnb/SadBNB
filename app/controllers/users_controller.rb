@@ -11,13 +11,13 @@ class UsersController < ApplicationController
 	end
 
 	def login
-		user = User.find_by(email: params[:email])
+		user = User.find_by(username: params[:username])
 		if user && user.authenticate(params[:password])
             # encodes token to send to user
 			token = JWT.encode({user_id: user.id, username: user.username}, SECRET_KEY, 'HS256')
 			render json: {user: user, token: token}, status: 200
 		else
-			render json: {error: 'Invalid email or password'}, status: 422
+			render json: {error: 'Invalid username or password'}, status: 422
 		end
 	end
 

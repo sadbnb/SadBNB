@@ -4,7 +4,7 @@ import Logo from "../Logo/Logo";
 import { Link } from "react-router-dom";
 import defaultUser from "../../assets/default-user.png";
 
-const Navbar = () => {
+const Navbar = ({ user }) => {
   return (
     <div className="navigation">
       <nav>
