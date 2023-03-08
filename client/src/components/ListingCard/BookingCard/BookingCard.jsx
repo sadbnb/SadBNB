@@ -6,7 +6,6 @@ import Calendar from '../Calendar/Calendar'
 
 const BookingCard = ({ interior, setTrigger, description}) => {
 
-    console.log(interior.image)
 
     const [calendarButton, setCalendarButton] = useState(false)
   return (
