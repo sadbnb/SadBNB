@@ -2,22 +2,42 @@ import React from "react";
 import "./register.scss";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import Cookies from 'js-cookie';
+import Cookies from 'js-cookie';
+import { useState, useRef } from "react";
+import { useNavigate } from 'react-router-dom';
 
-const Register = () => {
+const Register = ({ user, setUser }) => {
+  const navigate = useNavigate()
+  const form = useRef()
 
+ const createUser = async (e) => {
+    e.preventDefault()
+    let formData = new FormData(form.current)
+    let req = await fetch("http://localhost:3000/signup", {
+      method: 'POST',
+      body: formData
+    })
+    let res = await req.json()
+    if (req.ok) {
+      console.log(res.user)
+      Cookies.set('token', res.token)
+      setUser(res.user)
+      navigate("/login")
+    }  
+  }
+  
   return (
     <div className="register">
       <div className="register-container">
         <h1>Register</h1>
-        <form>
+        <form onSubmit={createUser} ref={form}>
           <div className="text-field">
-            <input type="text" required name="username" />
+            <input type="username" required name="username" />
             <span></span>
             <label>Username</label>
           </div>
           <div className="text-field">
-            <input type="Email" required name="email" />
+            <input type="email" required name="email" />
             <label>Email</label>
             <span></span>
           </div>
@@ -29,7 +49,7 @@ const Register = () => {
           <button>Register</button>
           <div className="sign-in-btn">
             Have an account?
-            <Hyperlink to="/login"> Sign in</Hyperlink>
+            <Hyperlink to="/login">Sign in</Hyperlink>
           </div>
         </form>
       </div>

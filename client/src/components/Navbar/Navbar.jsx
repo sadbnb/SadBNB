@@ -25,7 +25,11 @@ const Navbar = ({ user }) => {
 
         <div className="user">
           <img src={defaultUser} alt="" />
-          <span>Dwayne</span>
+          {user?
+            <span>{user.username}</span>
+            :
+            <span>Join today!</span>
+          }
         </div>
       </nav>
     </div>

@@ -6,7 +6,9 @@ import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
 import Landing from "./pages/Landing/Landing";
 import Navbar from "./components/Navbar/Navbar";
-import {useState} from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import Cookies from 'js-cookie';
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,11 +17,25 @@ import {
 
 const App = () => {
   const [user, setUser] = useState(null)
+    // const navigate = useNavigate()
+
+  useEffect(() => {
+    const loadUser = async () => {
+      let req = await fetch("http://localhost:3000/me", {
+        headers: { Authorization: Cookies.get('token') }
+      })
+      let res = await req.json()
+      if (res.user) setUser(res.user)
+    }
+    if (Cookies.get('token')) loadUser()
+  }, [])
+  
+  console.log(user)
 
   const Layout = () => {
     return (
       <>
-        <Navbar user={user} setUser={setUser}/>
+        <Navbar user={user} />
         <Outlet />
       </>
     )
@@ -31,8 +47,8 @@ const App = () => {
       element: <Layout />,
       children: [
         {
-          path: "/",
-          element: <Home />,
+          path: "/home",
+          element: <Home user={user} />,
         },
         {
           path: "/bookings",
