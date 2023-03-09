@@ -13,10 +13,10 @@ const Slider = () => {
       <section className="slider-container">
         <div className="slider-wrapper">
           <div className="slider">
-            <img id="slide-1" src={image1} alt="img1" />
+            <img id="slide-1" src={image4} alt="img1" />
             <img id="slide-2" src={image2} alt="img2" />
             <img id="slide-3" src={image3} alt="img3" />
-            <img id="slide-4" src={image4} alt="img4" />
+            <img id="slide-4" src={image1} alt="img4" />
           </div>
           <div className="slider-nav">
             <a href="#slide-1"></a>

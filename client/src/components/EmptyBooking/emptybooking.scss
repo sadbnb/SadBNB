@@ -1,0 +1,62 @@
+.empty-booking {
+  height: calc(100vh - 13.7rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    background: linear-gradient(
+      #e61e4d 27.5%,
+      #e31c5f 40%,
+      #d70466 57.5%,
+      #bd1e59
+    );
+    color: #fff;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 2.5rem;
+
+    &:hover {
+      border-color: #2691d9;
+      transition: 0.5s;
+    }
+  }
+}
+
+.images {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  max-width: 150px;
+}
+
+// .empty-booking button {
+//   width: 100%;
+//   height: 50px;
+//   border: 1px solid;
+//   background: linear-gradient(
+//     #e61e4d 27.5%,
+//     #e31c5f 40%,
+//     #d70466 57.5%,
+//     #bd1e59
+//   );
+//   border-radius: 25px;
+//   color: white;
+//   font-weight: 700;
+//   cursor: pointer;
+//   outline: none;
+
+//   &:hover {
+//     border-color: #2691d9;
+//     transition: 0.5s;
+//   }
+// }

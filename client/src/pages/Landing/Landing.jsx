@@ -12,7 +12,7 @@ const Landing = () => {
       <div className="container page">
         <div className="info">
           <h1>
-            Hotel <span>Booking</span> App
+            Luxury <span>Booking</span> App
           </h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi

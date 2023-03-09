@@ -56,15 +56,15 @@ Interior.create!(
   apartment_id:1
 )
 Interior.create!(
-  image1: "https://img.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2FRealEstateAdminImages.gabriels.net%2F170%2F77806%2F64c1e9b2-61a7-42bb-baf7-93dd426f13f6.jpg&option=N&idlisting=listingmedia&w=1600&permitphotoenlargement=false&fallbackimageurl=https%3A%2F%2Fstatic-christiesrealestate-cms-production-3.gtsstatic.net%2Fresources%2F_responsive%2Fimages%2Fcommon%2Fnophoto%2Flisting.jpg",
+  image: "https://img.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2FRealEstateAdminImages.gabriels.net%2F170%2F77806%2F64c1e9b2-61a7-42bb-baf7-93dd426f13f6.jpg&option=N&idlisting=listingmedia&w=1600&permitphotoenlargement=false&fallbackimageurl=https%3A%2F%2Fstatic-christiesrealestate-cms-production-3.gtsstatic.net%2Fresources%2F_responsive%2Fimages%2Fcommon%2Fnophoto%2Flisting.jpg",
   apartment_id:1
 )
 Interior.create!(
-  image2: "https://img.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2FRealEstateAdminImages.gabriels.net%2F170%2F77806%2Fb2a1c2d1-83a8-4812-bcd3-558edf184f62.jpg&option=N&idlisting=listingmedia&w=1600&permitphotoenlargement=false&fallbackimageurl=https%3A%2F%2Fstatic-christiesrealestate-cms-production-3.gtsstatic.net%2Fresources%2F_responsive%2Fimages%2Fcommon%2Fnophoto%2Flisting.jpg",
+  image: "https://img.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2FRealEstateAdminImages.gabriels.net%2F170%2F77806%2Fb2a1c2d1-83a8-4812-bcd3-558edf184f62.jpg&option=N&idlisting=listingmedia&w=1600&permitphotoenlargement=false&fallbackimageurl=https%3A%2F%2Fstatic-christiesrealestate-cms-production-3.gtsstatic.net%2Fresources%2F_responsive%2Fimages%2Fcommon%2Fnophoto%2Flisting.jpg",
   apartment_id:1
 )
 Interior.create!(
-  image3: "https://img.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2FRealEstateAdminImages.gabriels.net%2F170%2F77806%2F0a6ebe31-16e2-4d06-8eb1-2c007d31312c.jpg&option=N&idlisting=listingmedia&w=1600&permitphotoenlargement=false&fallbackimageurl=https%3A%2F%2Fstatic-christiesrealestate-cms-production-3.gtsstatic.net%2Fresources%2F_responsive%2Fimages%2Fcommon%2Fnophoto%2Flisting.jpg",
+  image: "https://img.gtsstatic.net/reno/imagereader.aspx?imageurl=https%3A%2F%2FRealEstateAdminImages.gabriels.net%2F170%2F77806%2F0a6ebe31-16e2-4d06-8eb1-2c007d31312c.jpg&option=N&idlisting=listingmedia&w=1600&permitphotoenlargement=false&fallbackimageurl=https%3A%2F%2Fstatic-christiesrealestate-cms-production-3.gtsstatic.net%2Fresources%2F_responsive%2Fimages%2Fcommon%2Fnophoto%2Flisting.jpg",
   apartment_id:1
 )
 Interior.create!(

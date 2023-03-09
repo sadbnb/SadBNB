@@ -5,16 +5,18 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import defaultUser from "../../assets/default-user.png";
 import { FaUserCircle, FaCaretDown } from "react-icons/fa";
-import Cookies from 'js-cookie';
-import { useNavigate } from 'react-router-dom';
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ user, setUser }) => {
   const [showLogout, setShowLogout] = useState(false);
 
+  const navigate = useNavigate();
   const logout = () => {
-    Cookies.remove('token')
-    setUser(null)
-  }
+    Cookies.remove("token");
+    setUser(null);
+    navigate("/landing");
+  };
 
   return (
     <div className="navigation">
