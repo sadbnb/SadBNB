@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :apartments
-  # resources :bookings
-  # resources :interiors, only [:index, :show, :create, :destroy]
+  resources :bookings
+  resources :interiors, only: [:index, :show]
 
   get '/users', to: 'users#index'
   get '/me', to: 'users#me'

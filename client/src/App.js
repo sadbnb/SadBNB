@@ -30,7 +30,7 @@ const App = () => {
     if (Cookies.get('token')) loadUser()
   }, [])
   
-  console.log(user)
+  // console.log(user)
 
   const Layout = () => {
     return (

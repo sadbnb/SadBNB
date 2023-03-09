@@ -12,12 +12,16 @@ function BookingPopUp(props) {
 
   return (trigger) ? (
     <>
-        {
-            interiors.map((interior) => {
-                console.log(interior.image)
-                return <BookingCard key={interior.id} interior={interior} setTrigger={setTrigger} description={description}/>
-            })
-        }
+      {
+        interiors.map((interior) => {
+          console.log(interior.image)
+          return (
+          <div>
+            <BookingCard key={interior.id} interior={interior} setTrigger={setTrigger} description={description}/>
+          </div>
+          );
+        })
+      } 
        
     </>
   ) : ""

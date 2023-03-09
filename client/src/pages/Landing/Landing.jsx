@@ -15,10 +15,7 @@ const Landing = () => {
             Luxury <span>Booking</span> App
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-            veritatis ad asperiores fugit suscipit? Accusamus, quod! Error
-            ducimus magni cum eos, laudantium velit natus quas labore quam
-            voluptatibus, odio fugit?
+            Your awaysis is just a click away. Listings start at $10000000000.
           </p>
           <Link to="/register" className="btn btn-hero">
             Login/Register

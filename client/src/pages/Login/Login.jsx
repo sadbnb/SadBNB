@@ -20,10 +20,9 @@ const Login = ({ user, setUser }) => {
       });
       let res = await req.json();
       if (req.ok) {
-        console.log(res.user);
+        // console.log(res.user);
         Cookies.set("token", res.token);
         setUser(res.user);
-        // this doesn't autorefresh
         navigate("/");
         setIsLoading(true);
       }
