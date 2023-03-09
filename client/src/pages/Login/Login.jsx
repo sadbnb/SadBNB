@@ -21,7 +21,8 @@ const Login = ({ user, setUser }) => {
       console.log(res.user)
       Cookies.set('token', res.token)
       setUser(res.user)
-      navigate("/home")
+      // this doesn't autorefresh
+      navigate("/listings")
     }
   }
 

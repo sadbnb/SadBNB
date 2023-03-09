@@ -2,9 +2,20 @@ import "./navbar.scss";
 import styled from "styled-components";
 import Logo from "../Logo/Logo";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import defaultUser from "../../assets/default-user.png";
+import { FaUserCircle, FaCaretDown } from "react-icons/fa";
+import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom';
 
-const Navbar = ({ user }) => {
+const Navbar = ({ user, setUser }) => {
+  const [showLogout, setShowLogout] = useState(false);
+
+  const logout = () => {
+    Cookies.remove('token')
+    setUser(null)
+  }
+
   return (
     <div className="navigation">
       <nav>
@@ -22,14 +33,21 @@ const Navbar = ({ user }) => {
             <Hyperlink to="bookings">Bookings</Hyperlink>
           </li>
         </ul>
-
-        <div className="user">
-          <img src={defaultUser} alt="" />
-          {user?
-            <span>{user.username}</span>
-            :
-            <span>Join today!</span>
-          }
+        <div className="btn-container">
+          <button
+            type="button"
+            className="btn"
+            onClick={() => setShowLogout(!showLogout)}
+          >
+            <FaUserCircle />
+            {user?.username || "Join today!"}
+            <FaCaretDown />
+          </button>
+          <div className={showLogout ? "dropdown show-dropdown" : "dropdown"}>
+            <button type="button" className="dropdown-btn" onClick={logout}>
+              Logout
+            </button>
+          </div>
         </div>
       </nav>
     </div>

@@ -35,7 +35,7 @@ const App = () => {
   const Layout = () => {
     return (
       <>
-        <Navbar user={user} />
+        <Navbar user={user} setUser={setUser} />
         <Outlet />
       </>
     )
@@ -47,7 +47,7 @@ const App = () => {
       element: <Layout />,
       children: [
         {
-          path: "/home",
+          path: "/",
           element: <Home user={user} />,
         },
         {
@@ -63,11 +63,11 @@ const App = () => {
     },
     {
       path: "/login",
-      element: <Login user={user} setUser={setUser}/>,
+      element: <Login user={user} setUser={setUser} />,
     },
     {
       path: "/register",
-      element: <Register user={user} setUser={setUser}/>,
+      element: <Register user={user} setUser={setUser} />,
     },
     {
       path: "/landing",
