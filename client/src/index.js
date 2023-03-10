@@ -2,10 +2,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import { AppProvider } from "./components/context/AppContext";
+import { BookingProvider } from "./components/context/BookingContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppProvider>
+      <BookingProvider>
+        <App />
+      </BookingProvider>
+    </AppProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

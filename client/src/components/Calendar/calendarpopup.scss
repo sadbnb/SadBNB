@@ -9,7 +9,9 @@
     width: 50%;
     height: 50px;
     color: white;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     left: 50px;
     background: linear-gradient(
       #e61e4d 27.5%,

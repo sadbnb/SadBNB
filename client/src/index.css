@@ -11,6 +11,7 @@
 
 html {
   font-size: 100%;
+  min-height: 100vh;
 } /*16px*/
 
 :root {
@@ -100,4 +101,8 @@ p {
     display: inline-block;
     margin-right: 0.5rem;
   }
+}
+
+.debugger {
+  border: 5px solid red;
 }

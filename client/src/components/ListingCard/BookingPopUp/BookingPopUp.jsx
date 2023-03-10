@@ -1,26 +1,27 @@
-import { useState } from 'react'
-import './BookingPopUp.scss'
-import Calendar from '../Calendar/Calendar'
-import BookingCard from '../BookingCard/BookingCard'
+import "./BookingPopUp.scss";
+
+import BookingCard from "../BookingCard/BookingCard";
 
 function BookingPopUp(props) {
+  const { trigger, setTrigger, interiors, description, details } = props;
 
-    const { trigger, setTrigger, interiors, description } = props
-
-
- 
-
-  return (trigger) ? (
+  return trigger ? (
     <>
-        {
-            interiors.map((interior) => {
-                console.log(interior.image)
-                return <BookingCard key={interior.id} interior={interior} setTrigger={setTrigger} description={description}/>
-            })
-        }
-       
+      {interiors.map((interior) => {
+        return (
+          <BookingCard
+            details={details}
+            key={interior.id}
+            interior={interior}
+            setTrigger={setTrigger}
+            description={description}
+          />
+        );
+      })}
     </>
-  ) : ""
+  ) : (
+    ""
+  );
 }
 
-export default BookingPopUp
+export default BookingPopUp;

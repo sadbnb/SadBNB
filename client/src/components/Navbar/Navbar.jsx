@@ -3,18 +3,18 @@ import styled from "styled-components";
 import Logo from "../Logo/Logo";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import defaultUser from "../../assets/default-user.png";
 import { FaUserCircle, FaCaretDown } from "react-icons/fa";
-import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import { useAppContext } from "../context/AppContext";
 
-const Navbar = ({ user, setUser }) => {
+const Navbar = () => {
   const [showLogout, setShowLogout] = useState(false);
+  const { user, logout } = useAppContext();
 
   const navigate = useNavigate();
-  const logout = () => {
-    Cookies.remove("token");
-    setUser(null);
+
+  const logOutUser = () => {
+    logout();
     navigate("/landing");
   };
 
@@ -46,7 +46,7 @@ const Navbar = ({ user, setUser }) => {
             <FaCaretDown />
           </button>
           <div className={showLogout ? "dropdown show-dropdown" : "dropdown"}>
-            <button type="button" className="dropdown-btn" onClick={logout}>
+            <button type="button" className="dropdown-btn" onClick={logOutUser}>
               Logout
             </button>
           </div>
