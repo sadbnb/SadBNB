@@ -9,24 +9,34 @@ import { useAppContext } from "../../context/AppContext";
 const CalendarComponent = (props) => {
   const [date, setDate] = useState([new Date(), new Date()]);
   const navigate = useNavigate();
-  const { addBooking, bookingItems } = useBookingContext();
+  const { addBooking } = useBookingContext();
   const { user } = useAppContext();
 
   const handleOnChange = (newDates) => {
     setDate(newDates);
   };
 
-  console.log(bookingItems);
   const handleAddBooking = () => {
     const { title, location, id } = props.details;
+
+    const startDateStr = date[0];
+    const endDateStr = date[1];
+
+    const startDate = new Date(startDateStr);
+    const endDate = new Date(endDateStr);
+
+    const options = { month: "long", day: "numeric", year: "numeric" };
+
+    const formattedStartDate = startDate.toLocaleDateString("en-US", options);
+    const formattedEndDate = endDate.toLocaleDateString("en-US", options);
 
     const bookingData = {
       title,
       location,
       apartment_id: id,
       user_id: user.id,
-      start_date: date[0],
-      end_date: date[1],
+      start_date: formattedStartDate,
+      end_date: formattedEndDate,
     };
 
     addBooking(bookingData);

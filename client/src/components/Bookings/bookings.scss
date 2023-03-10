@@ -1,25 +1,18 @@
-.orders {
-  height: calc(100vh - 50.7rem);
+.booking-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 30px;
+  margin: 10px 20px;
 
-  .orders-heading {
-    display: flex;
+  .booking-items {
+    display: inline-block;
     justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid #000;
-    margin-top: 5.5rem;
-    margin-bottom: 5.5rem;
-    width: 100%;
-    max-width: 600px;
-  }
+    height: 100vh;
 
-  .orders-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .booking-heading {
+      text-align: center;
+      border-bottom: 2px solid black;
+      margin: 20px;
+    }
   }
 }

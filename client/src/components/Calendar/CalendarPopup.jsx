@@ -12,12 +12,23 @@ const CalendarPopup = ({
 }) => {
   const [newDates, setNewDates] = useState(date);
 
+  const startDateStr = newDates[0];
+  const endDateStr = newDates[1];
+
+  const startDate = new Date(startDateStr);
+  const endDate = new Date(endDateStr);
+
+  const options = { month: "long", day: "numeric", year: "numeric" };
+
+  const formattedStartDate = startDate.toLocaleDateString("en-US", options);
+  const formattedEndDate = endDate.toLocaleDateString("en-US", options);
+
   const { updateBooking } = useBookingContext();
 
   const handleConfirmUpdateBooking = () => {
     const newBookingDates = {
-      start_date: newDates[0],
-      end_date: newDates[1],
+      start_date: formattedStartDate,
+      end_date: formattedEndDate,
     };
 
     updateBooking(bookingId, newBookingDates);

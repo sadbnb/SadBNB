@@ -6,7 +6,7 @@ function BookingPopUp(props) {
   const { trigger, setTrigger, interiors, description, details } = props;
 
   return trigger ? (
-    <>
+    <div className="popup-container">
       {interiors.map((interior) => {
         return (
           <BookingCard
@@ -18,7 +18,7 @@ function BookingPopUp(props) {
           />
         );
       })}
-    </>
+    </div>
   ) : (
     ""
   );

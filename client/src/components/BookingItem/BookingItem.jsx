@@ -39,10 +39,10 @@ const BookingItem = ({ item }) => {
             item.apartment ? item.apartment?.location : ""
           }`}</h3>
 
-          <p>
+          <h3>
             {`Date : ${item.start_date} -
               ${item.end_date}`}
-          </p>
+          </h3>
 
           <img src={item.apartment ? item.apartment?.main_image : ""} alt="" />
         </div>

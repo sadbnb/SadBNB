@@ -8,7 +8,7 @@ const Slider = () => {
   return (
     <>
       <div>
-        <h2>The most affordable luxury suits</h2>
+        <h2>The places you'll probably never be able to afford</h2>
       </div>
       <section className="slider-container">
         <div className="slider-wrapper">

@@ -15,10 +15,12 @@ const Landing = () => {
             Luxury <span>Booking</span> App
           </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-            veritatis ad asperiores fugit suscipit? Accusamus, quod! Error
-            ducimus magni cum eos, laudantium velit natus quas labore quam
-            voluptatibus, odio fugit?
+            Indulge in the ultimate luxury experience with our exclusive hotel
+            booking application. Our carefully curated collection of exceptional
+            hotels offers a perfect blend of opulence, comfort, and world-class
+            hospitality. From exotic locations to city centers, each of our
+            handpicked hotels is a testament to exquisite design, exceptional
+            service, and unparalleled comfort.
           </p>
           <Link to="/register" className="btn btn-hero">
             Login/Register

@@ -9,20 +9,20 @@ const Bookings = () => {
   const { bookingItems } = useBookingContext();
 
   return (
-    <>
+    <div className="booking-container">
       {bookingItems.length === 0 ? (
         <EmptyBooking />
       ) : (
-        <div className="orders">
-          <h1 className="orders-heading">My Bookings</h1>
-          <div className="orders-menu">
+        <div className="booking-items">
+          <h1 className="booking-heading">My Bookings</h1>
+          <div className="booking-menu">
             {bookingItems.map((item) => {
               return <BookingItem key={item.id} item={item} />;
             })}
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 };
 export default Bookings;
