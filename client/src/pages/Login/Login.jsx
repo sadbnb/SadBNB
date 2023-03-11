@@ -2,7 +2,7 @@ import "./login.scss";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAppContext } from "../../components/context/AppContext";
 
