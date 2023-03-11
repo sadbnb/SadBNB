@@ -1,6 +1,6 @@
 import "./listing.scss";
 import { useState, useEffect } from "react";
-import Listing from "../ListingCard/ListingCard";
+
 import ListingCard from "../ListingCard/ListingCard";
 
 const Listings = () => {

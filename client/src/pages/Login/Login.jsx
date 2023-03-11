@@ -13,29 +13,8 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-<<<<<<< HEAD
     let formData = new FormData(form.current);
     loginUser(formData);
-=======
-    try {
-      let formData = new FormData(form.current);
-      let req = await fetch("http://localhost:3000/login", {
-        method: "POST",
-        body: formData,
-      });
-      let res = await req.json();
-      if (req.ok) {
-        // console.log(res.user);
-        Cookies.set("token", res.token);
-        setUser(res.user);
-        navigate("/");
-        setIsLoading(true);
-      }
-    } catch (err) {
-      setIsLoading(false);
-      alert("Invalid credentials");
-    }
->>>>>>> b83f7a809356af380a6cc272160014ae38b31f8f
   };
 
   useEffect(() => {

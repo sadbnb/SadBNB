@@ -7,11 +7,7 @@ import image4 from "../../assets/sliders/apt4.jpg";
 const Slider = () => {
   return (
     <>
-<<<<<<< HEAD
       <div>
-=======
-      <div className="slider-div">
->>>>>>> b83f7a809356af380a6cc272160014ae38b31f8f
         <h2>The places you'll probably never be able to afford</h2>
       </div>
       <section className="slider-container">
