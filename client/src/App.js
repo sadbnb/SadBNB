@@ -18,6 +18,25 @@ import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import Error from "./components/Error/Error";
 
 const App = () => {
+<<<<<<< HEAD
+=======
+  const [user, setUser] = useState(null)
+    // const navigate = useNavigate()
+
+  useEffect(() => {
+    const loadUser = async () => {
+      let req = await fetch("http://localhost:3000/me", {
+        headers: { Authorization: Cookies.get('token') }
+      })
+      let res = await req.json()
+      if (res.user) setUser(res.user)
+    }
+    if (Cookies.get('token')) loadUser()
+  }, [])
+  
+  // console.log(user)
+
+>>>>>>> b83f7a809356af380a6cc272160014ae38b31f8f
   const Layout = () => {
     return (
       <>

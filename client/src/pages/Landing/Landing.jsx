@@ -15,12 +15,16 @@ const Landing = () => {
             Luxury <span>Booking</span> App
           </h1>
           <p>
+<<<<<<< HEAD
             Indulge in the ultimate luxury experience with our exclusive hotel
             booking application. Our carefully curated collection of exceptional
             hotels offers a perfect blend of opulence, comfort, and world-class
             hospitality. From exotic locations to city centers, each of our
             handpicked hotels is a testament to exquisite design, exceptional
             service, and unparalleled comfort.
+=======
+            Your awaysis is just a click away. Listings start at $10000000000.
+>>>>>>> b83f7a809356af380a6cc272160014ae38b31f8f
           </p>
           <Link to="/register" className="btn btn-hero">
             Login/Register
