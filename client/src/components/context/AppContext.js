@@ -66,5 +66,3 @@ export const useAppContext = () => {
 };
 
 export { AppProvider };
-
-// const navigate = useNavigate()
